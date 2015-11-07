@@ -1,168 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>纪建峰的简历 by HatCloud</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">纪建峰的简历</h1>
-      <h2 class="project-tagline"></h2>
-    </section>
+<html ng-app="deerResume">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeerResume</title>
+  <link href="image/browser.png" rel="shortcut icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/yue.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bower/components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower/components/ng-notify/dist/ng-notify.min.css">
+  <script src="bower/components/jquery/dist/jquery.min.js"></script>
+  <script src="bower/components/angular/angular.min.js"></script>
+  <script src="bower/components/angular-route/angular-route.min.js"></script>
+  <script src="bower/components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower/components/showdown/compressed/showdown.js"></script>
+  <script src="bower/components/ng-notify/dist/ng-notify.min.js"></script>
+  <script src="js/wizMarkdown.min.js"></script>
+  <script src="js/jspdf.min.js"></script>
+  <script src="js/jspdf.plugin.addhtml.js"></script>
+  <script src="bower/components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower/components/angularLocalStorage/src/angularLocalStorage.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <base target="_blank">
+  <div ng-view id="resume_body"></div>
+  <form action="http://pdf.ftqq.com" method="post" target="_blank" id="hform">
+    <input type="hidden" name="title"/>
+    <input type="hidden" name="subtitle"/>
+    <input type="hidden" name="content"/>
+    <input type="hidden" name="pdfkey"/>
+  </form>  
+</body>
 
-    <section class="main-content">
-      <h1>
-<a id="联系方式" class="anchor" href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>联系方式</h1>
-
-<ul>
-<li>手机：18604099720 (属地辽宁大连，最优联系时间: 9:00 - 19:00) </li>
-<li>微信号：hatcloud</li>
-<li>Email： <a href="mailto:mr.hatcloud@gmail.com">mr.hatcloud@gmail.com</a>
-</li>
-</ul>
-
-<hr>
-
-<h1>
-<a id="个人信息" class="anchor" href="#%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a>个人信息</h1>
-
-<ul>
-<li>纪建峰/男/1993</li>
-<li>本科/大连理工大学软件工程系 </li>
-<li>工作年限：应届生</li>
-<li>毕业时间：2015年七月份</li>
-<li>博客：<a href="http://hatcloud.me">尘的埃</a>
-</li>
-<li>Github：<a href="http://github.com/hatcloud">http://github.com/hatcloud</a>
-</li>
-<li>V2EX：<a href="https://www.v2ex.com/member/hatcloud">https://www.v2ex.com/member/hatcloud</a>
-</li>
-<li>期望职位：Android开发工程师</li>
-<li>期望城市：杭州，上海</li>
-</ul>
-
-<hr>
-
-<h1>
-<a id="项目经历" class="anchor" href="#%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>项目经历</h1>
-
-<h2>
-<a id="genealogy---android家谱信息展示个人" class="anchor" href="#genealogy---android%E5%AE%B6%E8%B0%B1%E4%BF%A1%E6%81%AF%E5%B1%95%E7%A4%BA%E4%B8%AA%E4%BA%BA" aria-hidden="true"><span class="octicon octicon-link"></span></a>Genealogy - Android家谱信息展示（个人）</h2>
-
-<p>GitHub地址：<a href="https://github.com/HatCloud/Genealogy">https://github.com/HatCloud/Genealogy</a></p>
-
-<p>时间：2015.03 - 2015.06</p>
-
-<p>这个项目是我的毕业设计项目，目的是为了设计一套在Android手机上显示家谱信息的方案。我在这个App中设计并实现了如下内容：使用SQLite设计实现了能兼容现有家谱数据的数据库，修改了开源控件<code>AndroidTreeView</code>使其能够显示家谱树状结构数据，使用<code>ViewPager</code>和<code>Fragment</code>实现了左右滑动的Tab。而且在这个项目中，我弱化了<code>Activity</code>的作用，仅仅使用它来管理<code>Fragments</code>，这样的实现方式可以带来诸多好处，例如界面之间方便的数据传输，对平板的多窗格界面的支持等等。</p>
-
-<h2>
-<a id="coolweather---酷欧天气个人" class="anchor" href="#coolweather---%E9%85%B7%E6%AC%A7%E5%A4%A9%E6%B0%94%E4%B8%AA%E4%BA%BA" aria-hidden="true"><span class="octicon octicon-link"></span></a>CoolWeather - 酷欧天气（个人）</h2>
-
-<p>GitHub地址：<a href="https://github.com/HatCloud/CoolWeather">https://github.com/HatCloud/CoolWeather</a></p>
-
-<p>时间：2015.01 - 2015.01</p>
-
-<p>这个应用能查询全国市级的天气信息并能后台定期更新。在本项目中，我采用了MVP模型完成了项目的整体架构，设计了SQLite数据库存储天气信息，使用<code>HttpURLConnection</code>和<code>JSONObject</code>来获取和解析天气信息，创建自定义<code>BroadcastReceiver</code>和<code>Service</code>来使应用能够在后台定期更新天气信息。</p>
-
-<h2>
-<a id="sudoku数独个人" class="anchor" href="#sudoku%E6%95%B0%E7%8B%AC%E4%B8%AA%E4%BA%BA" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sudoku数独（个人）</h2>
-
-<p>GitHub地址：<a href="https://github.com/HatCloud/Sudoku">https://github.com/HatCloud/Sudoku</a></p>
-
-<p>时间：2014.07 - 2014.08</p>
-
-<p>这是一个运行在Android的数独游戏。在本项目中，我使用<code>android.graphics.*</code>包下的<code>Canvas</code>，<code>Paint</code>等工具类，绘制了数独游戏的PuzzleView，编写了<code>getPuzzle(int difficulty)</code>方法来根据不同的难度生成随机的数独盘面，通过创建<code>layout-land</code>文件夹来解决横屏带来的问题。在本次项目中，我特别留意了应用在不同屏幕大小的手机上显示效果，这让我对Android的界面布局设计有了更深的理解。</p>
-
-<h2>
-<a id="核桃壳---网页剪报3人" class="anchor" href="#%E6%A0%B8%E6%A1%83%E5%A3%B3---%E7%BD%91%E9%A1%B5%E5%89%AA%E6%8A%A53%E4%BA%BA" aria-hidden="true"><span class="octicon octicon-link"></span></a>核桃壳 - 网页剪报（3人）</h2>
-
-<p>地址：<a href="http://www.google.cn/university/androidchallenge/2013/gallery.html#tab=d1-18">http://www.google.cn/university/androidchallenge/2013/gallery.html#tab=d1-18</a></p>
-
-<p>时间：2013.09 - 2013.10</p>
-
-<p>这是我在大三上学期的时候和两个同学一起做的一个作品。在这个项目中，我完成了本应用多个版本的界面设计，使用<code>Activity</code> ＋ <code>Fragment</code>的方式构建了应用整体的界面布局，通过对颜色和阴影的利用使得ListView实现的列表看上去像是卡片式的布局。</p>
-
-<p>我们用这个应用参加了<a href="http://www.google.cn/university/androidchallenge/index.html">2013 年第四届 Android 应用开发中国大学生挑战赛</a>。凭借其可靠的抓取算法和符合Android Design的界面设计，最终获取了省级二等奖和全国优秀奖。</p>
-
-<p>该应用最终的演示视频：<a href="http://v.youku.com/v_show/id_XNjM2NTU5NDYw.html?from=y1.7-2">这里</a></p>
-
-<hr>
-
-<h1>
-<a id="技能清单" class="anchor" href="#%E6%8A%80%E8%83%BD%E6%B8%85%E5%8D%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>技能清单</h1>
-
-<p>以下均为我熟练使用的技能</p>
-
-<ul>
-<li>Android开发，Java</li>
-<li>版本管理、文档和自动化部署工具：Git</li>
-</ul>
-
-<p>以下是我学过的技能（意味着我能快速上手）</p>
-
-<ul>
-<li>数据库相关：MySQL/SQLite</li>
-<li>iOS开发</li>
-</ul>
-
-<hr>
-
-<h1>
-<a id="可能有用的信息" class="anchor" href="#%E5%8F%AF%E8%83%BD%E6%9C%89%E7%94%A8%E7%9A%84%E4%BF%A1%E6%81%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a>可能有用的信息</h1>
-
-<p>开发环境</p>
-
-<ul>
-<li>MacBook Pro Retina <em>With</em> Mac OX </li>
-<li>Android Studio</li>
-<li>Genymotion模拟器</li>
-<li>Vim</li>
-</ul>
-
-<p>动手能力</p>
-
-<ul>
-<li>在搬瓦工VPS上搭建了科学上网用的SS</li>
-<li>用Wordpress，Typecho，Hexo等工具自己搭建过博客</li>
-<li>在青云上搭建过自己的Minecraft服务器</li>
-</ul>
-
-<p>其他</p>
-
-<ul>
-<li>熟悉GTD和番茄工作法</li>
-<li>能写些东西</li>
-<li>
-<p>借助工具能看懂一些英文干货</p>
-
-<hr>
-</li>
-</ul>
-
-<h1>
-<a id="参考技能关键字" class="anchor" href="#%E5%8F%82%E8%80%83%E6%8A%80%E8%83%BD%E5%85%B3%E9%94%AE%E5%AD%97" aria-hidden="true"><span class="octicon octicon-link"></span></a>参考技能关键字</h1>
-
-<p>android, java, app, AS, Eclipse</p>
-
-<hr>
-
-<h1>
-<a id="致谢" class="anchor" href="#%E8%87%B4%E8%B0%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>致谢</h1>
-
-<p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
-
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
 </html>
